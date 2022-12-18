@@ -61,7 +61,7 @@ int main() {
         Guardians_of_the_Galaxy["director"] = "James Gunn";
         Guardians_of_the_Galaxy["producer"] = "Kevin Feige";
         Guardians_of_the_Galaxy["character - Peter Quill / Star-Lord"] = "Chris Pratt";
-        Guardians_of_the_Galaxy["character - Gamora"] = "Dave Bautista";
+        Guardians_of_the_Galaxy["character - Gamora"] = "Zoe Saldaña";
         Guardians_of_the_Galaxy["character - Drax the Destroye"] = "Jessica Chastain";
         Guardians_of_the_Galaxy["character - Groot"] = "Vin Diesel";
         Guardians_of_the_Galaxy["character - Rocket"] = "Bradley Cooper";
@@ -100,11 +100,10 @@ int main() {
     file.close();
 
     std::cout << "Enter searching actor: ";
-    std::string actorName;
-    std::string actorSurname;
-
-    std::cin >> actorName >> actorSurname;
-
-   std::cout << actor_search (actorName, actorSurname , filmsInFile);
+    std::string actor;
+    std::cin >> actor;
+    std::string searching_actor;
+    searching_actor = actor_search (actor, filmsInFile);
+   std::cout << searching_actor;
 
 }
