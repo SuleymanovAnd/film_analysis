@@ -29,7 +29,7 @@ std::string actor_search (std::string actor,  nlohmann::json films){
 
         std::map<std::string,std::string>::iterator itMp;
         for(itMp = tempMap.begin(); itMp != tempMap.end();++itMp){
-            if(itMp->second.find(actor) != std::string::npos){
+            if(itMp->second.find(actor) != std::string::npos && itMp->first.find("character") != std::string::npos){
                 FilmInfo += itMp->second + ": " + itMp->first +".  Film name : " + newFilm.name + "\n";
             }
         }
